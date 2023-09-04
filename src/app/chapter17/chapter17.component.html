@@ -1,0 +1,40 @@
+<h1>Chapter 17</h1>
+<hr>
+
+<div class="container-fluid">
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="col-7">
+        <ul *ngIf="this.users && this.users.length> 1; else oneUser">
+          <li *ngFor="let item of this.users; let i=index">
+
+            <a *ngIf="i % 2 ===0" [routerLink]="['_171',item.id]"> {{item.title}}></a>
+            <a *ngIf="i % 2 !==0" [routerLink]="['_172',item.id]"> {{item.title}}></a>
+
+          </li>
+        </ul>
+
+        <ng-template #oneUser>
+          {{this.users|json}}
+        </ng-template>
+
+      </div>
+      <div class="col-5">
+
+        <h2>Simple children route</h2>
+        <router-outlet></router-outlet>
+
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+</div>

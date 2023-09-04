@@ -1,0 +1,16 @@
+<div *ngFor="let note of items; let i=index; let lastcall=last;let e=even;let o = even">
+  <h3>{{i}}</h3>
+  <h3 *ngIf=e>{{note.name}}</h3>
+  <span *ngIf="lastcall">{{anyfunction()}} </span>
+</div>
+
+<ng-container *ngFor="let item  of items" let i="index">
+  <div *ngIf="item.price > 15">
+    <p>Preco : {{item.price}}</p>
+  </div>
+</ng-container>
+
+
+<div *ngIf="loading" class="progress">
+  <div class="progress-bar info" style="width: 125%;">Loading....</div>
+</div>

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { inject } from '@angular/core';\nimport { AuthService } from './auth.service';\nexport const CurrentResolve = (route, state) => {\n  return inject(AuthService).user;\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

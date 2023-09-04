@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { inject } from '@angular/core';\nimport { AuthService } from '../services/auth.service';\nexport const AuthGuard = (route, state) => {\n  return inject(AuthService).fetchCurrentUser();\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

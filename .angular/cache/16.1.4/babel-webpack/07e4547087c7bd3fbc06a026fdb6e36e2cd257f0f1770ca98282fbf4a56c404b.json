@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class UserToken {}","map":{"version":3,"names":["UserToken"],"sources":["/home/adilson/project/Angular/NotesForProfessional/src/app/chapter18/model/UserToken.ts"],"sourcesContent":["export class UserToken {\n}\n"],"mappings":"AAAA,OAAM,MAAOA,SAAS"},"metadata":{},"sourceType":"module","externalDependencies":[]}

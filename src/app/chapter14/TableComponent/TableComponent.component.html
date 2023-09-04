@@ -1,0 +1,38 @@
+<h1>Section 14.5: Dynamic Pipe</h1>
+
+<table>
+  <thead>
+    <td *ngFor="let head of header">{{ head }}</td>
+  </thead>
+  <tr *ngFor="let row of rows; let i = index">
+    <td *ngFor="let column of row">{{ column.toString()| dynamic:pipes[i]}}</td>
+  </tr>
+</table>
+<hr/>
+
+<h1>Section 14.6: Unwrap async values with async pipe</h1>
+
+<h5>{{name | async}}</h5>
+<h5>{{time |  async| date:'mm:ss'}}</h5>
+
+<ul>
+  <li *ngFor="let item of friends |async"> {{item}}</li>
+</ul>
+
+<hr />
+<h1>Section 14.7: Stateful Pipes</h1>
+<p> {{ 1000 | countdown:1 }}</p>
+<p>{{ 300 | countdown }}</p>
+
+
+
+<hr />
+<h1>Section 14.8: Creating Custom Pipe</h1>
+<p>{{value | truthy:'enabled':'disabled' }}</p>
+
+
+<hr />
+<h1>Section 14.10: Extending an Existing Pipe</h1>
+<p> If is date :  {{superDate | ifdate:'dd/MM/yyyy'}}</p>
+
+

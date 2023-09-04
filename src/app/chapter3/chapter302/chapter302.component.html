@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()" class="form-inline" >
+    <div class="row" *ngIf="this.skills.controls.length>0" formArrayName="skills">
+
+     <ng-container *ngFor="let ski of this.skills.controls;let i=index; let last=last"  [formGroupName]="i"  >
+      <div class="col-2"><label for="name" class="m-2" >skill_{{i}}</label></div>
+      <div class="col-7"><input type="text" class="form-control m-2 col-4" id="skill_{{i}}" formControlName="skill" ></div>
+      <div class="col-3"><button  type="button" class="btn btn-danger m-2"  (click)="removeControl(i)" *ngIf="this.skills.controls.length>1">&nbsp;- &nbsp;</button><button  type="button" class="btn btn-primary m-2" (click)="addControl()" *ngIf="last">&nbsp;+ &nbsp;</button></div>
+     </ng-container>
+
+     <input type="submit" value="Mostrar" class="btn btn-success"/>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+

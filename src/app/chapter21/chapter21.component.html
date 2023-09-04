@@ -1,0 +1,57 @@
+<div class="container-fluid">
+
+  <div class="col-12">
+
+    <div class="row">
+      <p>NgModel</p>
+      <div class="col-4">
+        <label for="hero">Nome do heroi :
+          <input [(ngModel)]="hero" placeholder="Hero name">
+        </label>
+      </div>
+      <div class="col-4">
+        <label for="power">Poder do heroi :
+          <input [(ngModel)]="power" placeholder="Hero power">
+        </label>
+      </div>
+      <div class="col-4">
+        {{hero}} {{power}}
+      </div>
+    </div>
+
+
+    <hr>
+
+    <div class="row">
+      <p>#Elements</p>
+      <div class="col-3">
+        <label for="ElmentoOne">ElmentoOne :
+          <input #elements myEdit placeholder="ElmentoOne" type="text" value="ElmentoOne" id="El1">
+        </label>
+      </div>
+      <div class="col-3">
+        <label for="ElmentoTwo">ElmentoTwo :
+          <input #elements myEdit placeholder="ElmentoTwo" type="text" value="ElmentoTwo" id="El2">
+        </label>
+      </div>
+      <div class="col-3">
+       <button (click)="Execute($event)" class="btn btn-success"> Event Target </button>
+      </div>
+
+      <div class="col-3">
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+  <app-chapter211 [hero]="hero" [power]="power"></app-chapter211>
+</div>

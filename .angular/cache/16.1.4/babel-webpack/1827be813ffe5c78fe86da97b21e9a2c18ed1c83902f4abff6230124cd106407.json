@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class CarEntity {\n  constructor(brand, color) {\n    this.brand = brand;\n    this.color = color;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

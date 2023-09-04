@@ -1,0 +1,17 @@
+<div class="container-fluid">
+
+    <div class="row" *ngIf="this.dynamicForm.controls.length>0" >
+
+      <ng-container *ngFor="let ski of this.dynamicForm.controls;let i=index; let last=last" >
+        <div class="col-2"><label for="name" class="m-2">control_{{i}}</label></div>
+        <div class="col-7"><input type="text" class="form-control m-2 col-4" id="control_{{i}}" name="control_{{i}}" ngModel #control  [formControl]="ski">
+        </div>
+        <div class="col-3"><button type="button" class="btn btn-danger m-2" (click)="removeControl(i)"
+            *ngIf="this.dynamicForm.controls.length>1">&nbsp;- &nbsp;</button><button type="button"
+            class="btn btn-primary m-2" (click)="addControl()" *ngIf="last">&nbsp;+ &nbsp;</button></div>
+      </ng-container>
+
+      <input type="button" value="Mostrar" class="btn btn-success"  (click)="onSubmit()"/>
+    </div>
+
+</div>

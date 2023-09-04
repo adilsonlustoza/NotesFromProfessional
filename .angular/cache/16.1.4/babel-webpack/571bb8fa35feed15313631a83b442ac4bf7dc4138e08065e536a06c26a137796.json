@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { QuestionBase } from './QuestionBase';\nexport class DropDownQuestion extends QuestionBase {\n  constructor() {\n    super(...arguments);\n    this.controlType = 'dropdown';\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { BaseRouteReuseStrategy } from \"@angular/router\";\nexport class CustomReuseStrategy extends BaseRouteReuseStrategy {\n  shouldReuseRoute(future, curr) {\n    return future.data['reuseComponent'];\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

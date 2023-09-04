@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="container">
+
+
+    <li *ngFor="let item of heroes; let i = index; trackBy: trackByFn">
+      {{i}} - {{item.name}}
+    </li>
+
+
+    <app-chapter121 *ngFor="let hero of heroes" [hero]="hero"></app-chapter121>
+
+
+    <app-chapter124></app-chapter124>
+
+
+  </div>
+</div>
